@@ -1,0 +1,159 @@
+.header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    box-shadow: 5px 5px 15px -1px rgba(0, 0, 0, 0.3);
+    z-index: 100;
+    transition: 0.3s;
+}
+
+.header.rolagem {
+    background-color: var(--azul);
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: auto;
+    padding: 15px 20px;
+}
+
+.hamburger {
+    display: none;
+    border: none;
+    background: none;
+    border-top: 3px solid var(--branco);
+    cursor: pointer;
+    padding: 0px;
+}
+
+.hamburger::before,
+.hamburger::after {
+    content: "";
+    display: block;
+    width: 30px;
+    height: 3px;
+    background-color: var(--branco);
+    margin-top: 5px;
+    position: relative;
+    transition: 0.7s;
+}
+
+.nav-list {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+.nav-opcao {
+    display: inline-block;
+    padding: 15px 0px;
+    position: relative;
+}
+
+.nav-opcao::after {
+    content: "";
+    display: block;
+    height: 2px;
+    width: 0px;
+    background-color: var(--branco);
+    position: absolute;
+    margin-top: 4px;
+    transition: 0.3s;
+}
+
+.nav-opcao:hover::after {
+    width: 100%;
+}
+
+/* responsividade - width */
+@media (max-width: 920px) {
+    .hamburger {
+        position: relative;
+        display: block;
+        z-index: 1000;
+    }
+
+    .nav-list {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: var(--azul);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        clip-path: circle(100px at 98% -21%);
+        transition: 0.4s ease-out;
+        pointer-events: none;
+    }
+
+    .nav-list a {
+        opacity: 0;
+    }
+
+    .nav-list .btn {
+        margin-top: 20px;
+    }
+
+    .nav-list li:nth-child(1) a {
+        transition: 0.3 ease;
+    }
+
+    .nav-list li:nth-child(2) a {
+        transition: 0.3 ease;
+    }
+
+    .nav-list li:nth-child(3) a {
+        transition: 0.3 ease;
+    }
+
+    .nav-list li:nth-child(4) a {
+        transition: 0.3 ease;
+    }
+
+    .nav-list li:nth-child(5) a {
+        transition: 0.3 ease;
+    }
+
+    .nav.active .nav-list {
+        clip-path: circle(1500px at 98% -21%);
+        pointer-events: all;
+    }
+
+    .nav-opcao {
+        width: 160px;
+        border-radius: 4px;
+        background-color: var(--azul-escuro);
+        text-align: center;
+    }
+
+    .nav-opcao::after {
+        display: none;
+    }
+
+    .nav.active a {
+        opacity: 1;
+    }
+
+    .nav.active .hamburger {
+        position: fixed;
+        top: 26px;
+        right: 16px;
+        border-top-color: transparent;
+    }
+
+    .nav.active .hamburger::before {
+        transform: rotate(135deg);
+    }
+
+    .nav.active .hamburger::after {
+        transform: rotate(-135deg);
+        top: -7px;
+    }
+}

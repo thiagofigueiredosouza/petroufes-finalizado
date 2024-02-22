@@ -1,0 +1,19 @@
+@import "./global/global.css";
+
+/* Utilidades */
+@import "./utilidades/cores.css";
+@import "./utilidades/componentes.css";
+@import "./utilidades/tipografia.css";
+
+/* Header e Footer */
+@import "./global/header.css";
+@import "./global/footer.css";
+
+/* Home */
+@import "./home/introducao.css";
+@import "./home/sobre.css";
+@import "./home/cronograma.css";
+@import "./home/palestrantes.css";
+@import "./home/patrocinadores.css";
+@import "./home/realizacao.css";
+@import "./home/duvidas.css";

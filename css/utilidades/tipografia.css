@@ -1,0 +1,144 @@
+.font-1 {
+    font: 500 1.125rem/1.35 "Poppins", sans-serif;
+}
+
+.font-2 {
+    font: 400 1.2rem/1.5 "Roboto", sans-serif;
+}
+
+.font-3 {
+    font: 600 1.2rem/1.125 "Poppins", sans-serif;
+    width: 60ch;
+}
+
+.font-4 {
+    font: 600 2rem/1.125 "Poppins", sans-serif;
+}
+
+.font-5 {
+    font: 400 1.4rem/1.2 "Roboto", sans-serif;
+}
+
+.font-6 {
+  font: 400 1.2rem/1.5 "Roboto", sans-serif;
+  font-weight: 500;
+  letter-spacing: 0.015em;
+  text-transform: uppercase;
+}
+
+.font-7 {
+  font: 500 1.125rem/1.35 "Roboto", sans-serif;
+}
+
+.font-8 {
+  font: 500 1.125rem/1.35 "Poppins", sans-serif;
+}
+
+/* responsividade - width */
+@media (max-width: 1250px) {
+    .font-5 {
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 1200px) {
+    .font-5 {
+        font-size: 1.2rem;
+    }
+
+    .font-2-l {
+      font-size: 1.125rem;
+    }
+
+    .font-6 {
+      font-size: 1.125rem;
+    }
+}
+
+@media (max-width: 800px) {
+    .font-2,
+    .font-3 {
+        font-size: 1.1rem;
+    }
+
+    .font-4 {
+        font-size: 1.9rem;
+    }
+}
+
+@media (max-width: 720px) {
+    .font-2,
+    .font-3 {
+        font-size: 1rem;
+    }
+
+    .font-4 {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 660px) {
+    .font-2,
+    .font-3 {
+        font-size: 0.9rem;
+    }
+
+    .font-4 {
+        font-size: 1.7rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .font-2,
+    .font-3 {
+        font-size: 0.8rem;
+    }
+
+    .font-4 {
+        font-size: 1.6rem;
+    }
+}
+
+@media (max-width: 540px) {
+    .font-2,
+    .font-3 {
+        font-size: 0.7rem;
+    }
+
+    .font-4 {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .font-2, 
+    .font-3 {
+        font-size: 0.6rem;
+    }
+
+    .font-4 {
+        font-size: 1.4rem;
+    }
+}
+
+@media (max-width: 420px) {
+    .font-2, 
+    .font-3 {
+        font-size: 0.5rem;
+    }
+
+    .font-4 {
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 350px) {
+    .font-2, 
+    .font-3 {
+        font-size: 0.4rem;
+    }
+
+    .font-4 {
+        font-size: 1.2rem;
+    }
+}

@@ -1,0 +1,165 @@
+.introducao-container {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+
+.introducao-bg {
+    width: 100%;
+    height: 100%;
+    background-image: url('../../img/fotos/introducao.webp');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    isolation: isolate;
+    animation: zoom 3s linear;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.introducao-bg::after {
+    position: absolute;
+    content: "";
+    opacity: 0.9;
+    z-index: -1;
+    inset: 0;
+    background-color: var(--azul);
+}
+
+.introducao-conteudo {
+  position: absolute;
+  max-width: 1200px;
+  top: 90px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+
+.data-local {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 25vh;
+}
+
+.introducao-capa {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.introducao-conteudo h1 {
+  text-align: center;
+}
+
+/* animação */
+@keyframes zoom {
+    from{
+      scale: 1.2;
+    }
+    to{
+      scale: 1;
+    }
+  }
+
+/* responsividade - height */
+@media (max-height: 950px) {
+  .data-local {
+    margin-bottom: 20vh;
+  }
+}
+
+@media (max-height: 800px) {
+  .data-local {
+    margin-bottom: 15vh;
+  }
+}
+
+@media (max-height: 700px) {
+  .data-local {
+    margin-bottom: 10vh;
+  }
+}
+
+/* responsividade - width */
+@media (max-width: 1350px) {
+  .introducao-conteudo {
+    padding: 0px 20px;
+  }
+
+  .introducao-petroufes,
+  .introducao-seminario {
+    width: 380px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .introducao-petroufes,
+  .introducao-seminario {
+    width: 370px;
+  }
+}
+
+@media (max-width: 920px) {
+  .introducao-conteudo {
+    top: 100px;
+  }
+}
+
+@media (max-width: 720px) {
+  .introducao-petroufes,
+  .introducao-seminario {
+    width: 360px;
+  }
+}
+
+@media (max-width: 660px) {
+  .introducao-petroufes,
+  .introducao-seminario {
+    width: 350px;
+  }
+}
+
+@media (max-width: 600px) {
+  .introducao-petroufes,
+  .introducao-seminario {
+    width: 340px;
+  }
+}
+
+@media (max-width: 540px) {
+  .introducao-petroufes,
+  .introducao-seminario {
+    width: 330px;
+  }
+}
+
+@media (max-width: 480px) {
+  .introducao-capa img {
+    width: 320px;
+  }
+}
+
+@media (max-width: 420px) {
+  .introducao-capa img {
+    width: 310px;
+  }
+}
+
+@media (max-width: 380px) {
+  .introducao-capa img {
+    width: 300px;
+  }
+}
+
+@media (max-width: 360px) {
+  .introducao-capa img {
+    width: 270px;
+  }
+}

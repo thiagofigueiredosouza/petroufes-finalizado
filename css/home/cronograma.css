@@ -1,0 +1,312 @@
+.cronograma {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+}
+
+.btn-cronograma {
+    background: none;
+    border: none;
+    color: var(--cinza-escuro);
+    cursor: pointer;
+    font-size: 24px;
+    font-weight: 700;
+    position: relative;
+    transition: 0.5s;
+}
+
+.btn-cronograma:hover {
+    color: var(--vermelho-claro);
+}
+
+.cronograma-data {
+    display: flex;
+    gap: 1rem;
+}
+
+.programacao {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 70%;
+    padding: 2rem;
+    border-radius: 12px;
+    background-color: var(--cinza-claro);
+    box-shadow: 5px 5px 15px -1px rgba(0, 0, 0, 0.3);
+}
+
+.cronograma-campos {
+    display: grid;
+    grid-template-columns: 3fr 1fr 1fr;
+    color: var(--azul);
+    text-transform: uppercase;
+    width: 100%;
+    box-sizing: border-box;
+    gap: 20px;
+}
+
+.cronograma-campos p {
+    font-size: 1.1rem;
+    font-weight: 800;
+    text-align: left;
+}
+
+.cronograma-eventos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.cronograma-evento {
+    display: grid;
+    grid-template-columns: 3fr 1fr 1fr;
+    padding: 1rem 0;
+    color: var(--azul);
+    font-size: 1rem;
+    font-weight: 600;
+    width: 100%;
+    gap: 20px;
+}
+
+.cronograma-evento:not(:last-child) {
+    border-bottom: 2px solid var(--cinza-escuro);
+}
+
+.cronograma-evento-nome {
+    white-space: wrap;
+    width: 80%;
+}
+
+.cronograma-evento-horario,
+.cronograma-evento-palestrante {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+}
+
+
+.mais-nome,
+.mais-palestrante {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: space-between;
+}
+
+.mais-informacao-nome,
+.mais-informacao-palestrante {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#primeiro-dia {
+    display: block;
+}
+
+#segundo-dia,
+#terceiro-dia,
+#quarto-dia {
+    display: none;
+}
+
+#dia-1.selecionado,
+#dia-2.selecionado,
+#dia-3.selecionado,
+#dia-4.selecionado {
+    color: var(--vermelho-claro);
+}
+
+@media (max-width: 1160px) {
+    .cronograma-campos,
+    .cronograma-evento {
+        grid-template-columns: 2fr 1fr 1fr;
+    }
+}
+
+@media (max-width: 920px) {
+    .cronograma-campos {
+        display: none;
+    }
+
+    .cronograma-campos p {
+        font-size: 1rem;
+    }
+
+    .cronograma-evento {
+        font-size: 0.9rem;
+    }
+
+    .btn-cronograma {
+        font-size: 22px;
+        background-color: var(--azul);
+        color: var(--branco);
+        padding: 4px 8px;
+        border-radius: 4px;
+    }
+
+    .btn-cronograma:hover {
+        color: var(--branco);
+    }
+
+    #dia-1.selecionado,
+    #dia-2.selecionado,
+    #dia-3.selecionado,
+    #dia-4.selecionado {
+        background-color: var(--vermelho-claro);
+        color: var(--branco);
+    }
+
+    .cronograma-evento {
+        gap: 5px;
+    }
+
+    .cronograma-evento-nome,
+    .mais-nome,
+    .mais-informacao-nome {
+        grid-column: 1/5;
+        gap: 5px;
+    }
+
+    .mais-informacao-nome span::before,
+    .mais-nome span::before {
+        content: ".";
+        margin-right: 2px;
+        color: var(--vermelho-claro);
+    }
+
+    .cronograma-evento-horario {
+        grid-column: 1;
+        grid-row: 1;
+        color: var(--vermelho-claro);
+    }
+
+    .cronograma-evento-palestrante,
+    .mais-palestrante,
+    .mais-informacao-palestrante {
+        display: flex;
+        flex-direction: row;
+        grid-column: 1/5;
+        justify-content: start;
+    }
+}
+
+@media (max-width: 850px) {
+    .btn-cronograma {
+        font-size: 20px;
+    }
+
+    .cronograma-campos p {
+        font-size: 0.9rem;
+    }
+
+    .cronograma-evento {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 750px) {
+    .cronograma {
+        gap: 2rem;
+    }
+
+    .programacao {
+        padding: 1.6rem;
+    }
+
+    .btn-cronograma {
+        font-size: 18px;
+    }
+
+    .cronograma-campos p {
+        font-size: 0.8rem;
+    }
+
+    .cronograma-evento {
+        font-size: 0.7rem;
+        padding: 0.6rem 0;
+    }
+}
+
+@media (max-width: 650px) {
+    .cronograma {
+        gap: 1.5rem;
+    }
+
+    .programacao {
+        padding: 1.2rem;
+    }
+
+    .btn-cronograma {
+        font-size: 16px;
+    }
+
+    .cronograma-campos p {
+        font-size: 0.7rem;
+    }
+
+    .cronograma-evento {
+        font-size: 0.7rem;
+        padding: 0.4rem 0;
+    }
+}
+
+@media (max-width: 570px) {
+    .cronograma-campos,
+    .cronograma-evento {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+@media (max-width: 450px) {
+    .cronograma-evento-horario,
+    .cronograma-evento-palestrante {
+        flex-wrap: wrap;
+    }
+
+    .cronograma-campos,
+    .cronograma-evento {
+        grid-template-columns: 2fr 1fr 1fr;
+    }
+
+    .cronograma {
+        gap: 1.2rem;
+    }
+
+    .programacao {
+        padding: 0.6rem;
+    }
+
+    .btn-cronograma {
+        font-size: 14px;
+        padding: 3px 6px;
+    }
+
+    .cronograma-data {
+        gap: 0.5rem;
+    }
+
+    .cronograma-campos {
+        gap: 6px;
+    }
+
+    .cronograma-campos p {
+        font-size: 0.55rem;
+    }
+}
+
+@media (max-width: 400px) {
+    .cronograma-data {
+        gap: 0.3rem;
+    }
+
+    .btn-cronograma {
+        font-size: 12px;
+    }
+}

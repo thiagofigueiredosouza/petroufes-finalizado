@@ -1,0 +1,127 @@
+.obs {
+    font-size: 0.7rem;
+    text-align: center;
+    padding-top: 60px;
+    padding-bottom: 10px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 16px 32px;
+    background-color: var(--vermelho-escuro);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    text-transform: uppercase;
+    max-width: max-content;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn.secundario {
+    padding: 10px 20px;
+}
+
+.btn:hover,
+.btn:active,
+.btn:focus {
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1)
+}
+
+.introducao-capa .btn {
+    margin-top: 40px;
+}
+
+.divisao {
+    padding-top: 60px;
+}
+
+.divisao-2 {
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.titulo-secao {
+    margin-bottom: 60px;
+    margin-left: 60px;
+}
+
+/* responsividade - height */
+@media (max-height: 500px) {
+    .introducao-capa .btn {
+        margin-top: 30px;
+    }
+
+}
+
+@media (max-height: 450px) {
+    .introducao-capa .btn {
+        margin-top: 20px;
+    }
+}
+
+@media (max-height: 400px) {
+    .introducao-capa .btn {
+        margin-top: 10px;
+        padding: 8px 16px;
+    }
+
+    .obs {
+        padding-top: 40px;
+    }
+
+    .divisao {
+        padding-top: 40px;
+    }
+
+    .divisao-2 {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+
+    .titulo-secao {
+        margin-bottom: 40px;
+        margin-left: 40px;
+    }
+}
+
+@media (max-height: 350px) {
+    .introducao-capa .btn {
+        margin-top: 5px;
+    }
+}
+
+/* responsividade - width */
+@media (max-width: 800px) {
+    .introducao-capa .btn {
+        margin-top: 20px;
+    }
+
+    .divisao {
+        padding-top: 40px;
+    }
+
+    .divisao-2 {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+
+    .titulo-secao {
+        margin-bottom: 40px;
+        margin-left: 40px;
+    }
+}
+
+@media (max-width: 800px) {
+    .introducao-capa .btn {
+        margin-top: 15px;
+    }
+}
+
+@media (max-width: 500px) {
+    .obs {
+        font-size: 0.6rem;
+    }
+}
